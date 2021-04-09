@@ -1,0 +1,47 @@
+.clients {
+  padding: 60px 0;
+}
+
+.clients .subtitle-clients {
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: .9em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.clients .title-clients {
+  text-align: center;
+  font-family: var(--main-font);
+  font-weight: normal;
+  font-size: 2.3em;
+}
+
+.clients .content-clients {
+  padding-top: 50px;
+}
+
+.clients .content-clients .clients-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.clients .content-clients .clients-img img {
+  display: flex;
+  width: auto;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 300px) {
+  .clients .title-clients {
+    font-size: 1.8em;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+.wrapper-social-post {
+  padding-bottom: 100px;
+}
+
+.wrapper-social-post .content-social {
+  padding: 0 80px;
+}
+
+.wrapper-social-post .title-social {
+  text-align: center;
+  font-family: var(--main-font);
+  font-weight: normal;
+  font-size: 2.3em;
+}
+
+.wrapper-social-post .subtitle-social {
+  text-align: center;
+  font-family: var(--main-font);
+  font-size: .9em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.social-imgs {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+}
+
+.social-imgs .double-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  position: relative;
+  top: 9%;
+}
+
+.social-layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(149, 101, 56, .9);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+
+.relative:hover .social-layer {
+  opacity: 1;
+  visibility: visible;
+}
+
+.description-img {
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  z-index: 10;
+}
+
+.description-img h2 {
+  opacity: 0;
+  visibility: hidden;
+  color: #fff;
+  font-family: var(--main-font);
+  font-size: 1.5em;
+  font-weight: lighter;
+  transform: translateY(-20px);
+  transition: .3s;
+}
+
+.description-img p {
+  opacity: 0;
+  visibility: hidden;
+  color: #fff;
+  transform: translateY(20px);
+  transition: .3s;
+}
+
+.relative:hover .description-img h2 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);  
+}
+
+.relative:hover .description-img p {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);  
+}
+
+/* RESPONSIVO */
+
+@media (min-width: 300px) and (max-width: 767px) {
+  .wrapper-social-post .content-social {
+    padding: 0 10px;
+  }
+
+  .wrapper-social-post .title-social {
+    font-size: 1.8em;
+  }
+
+  .relative {
+    margin-bottom: 20px;
+  }
+
+  .description-img {
+    top: 6%;
+  }
+
+  .description-img h2 {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1200px) {
+  .description-img h2 {
+    font-size: .9em;
+  }
+
+  .description-img p {
+    font-size: .8em;
+  }
+}
+

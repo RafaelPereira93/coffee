@@ -1,0 +1,51 @@
+.about {
+  padding: 150px 0;
+}
+
+.about .content-about {
+  position: relative;
+}
+
+.about .content-about .box-content-about {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.content-about .box-content-about h3 {
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+.content-about .box-content-about h5 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 300px) and (max-width: 990px){
+  .about {
+    padding-top: 50px;
+  }
+
+  .about .content-about .box-content-about {
+    position: static;
+    transform: translate(0, 0);
+    margin-bottom: 80px;
+  }
+
+  .content-about .box-content-about h3 {
+    margin-bottom: 30px;
+  }
+
+  .content-about .box-content-about h5 {
+    font-size: 2em;
+  }
+  
+}
+
+

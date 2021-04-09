@@ -1,0 +1,145 @@
+header {
+  background: url("../images/banner/main-banner.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.navegacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.navegacao .logo {
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.navegacao .nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0;
+}
+
+.navegacao .nav-menu li a {
+  display: inline-block;
+  margin: 0 20px;
+  color: #fff;
+  font-family: var(--main-font);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navegacao .nav-menu li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.3s ease-in;
+}
+
+.navegacao .nav-menu li a:hover:after {
+  width: 100%;
+}
+
+.navegacao a.hamburguer {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.navegacao .cart-e-search {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100px;
+}
+
+.navegacao .cart-e-search a i {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.content-banner {
+  position: absolute;
+  top: 300px;
+}
+
+.content-banner h1 {
+  color: #fff;
+  font-size: 3.5em;
+  font-family: var(--main-font);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.content-banner a {
+  display: inline-block;
+  text-align: center;
+  min-width: 150px;
+  background-color: #906032;
+  color: #fff;
+  padding: 10px 5px;
+  border-radius: 3px;
+  margin-top: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9em;
+  transition: 0.3s;
+}
+
+.content-banner a:hover {
+  background-color: #8f7657;
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 770px) {
+  .content-banner {
+    position: absolute;
+    top: 250px;
+  }
+
+  .content-banner h1 {
+    font-size: 3em;
+  }
+
+  .navegacao .nav-menu {
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    position: absolute;
+    top: 120px;
+    right: -500px;
+
+    min-width: 300px;
+    min-height: 300px;
+
+    background-color: rgba(0, 0, 0, 0.95);
+
+    z-index: 10;
+
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .navegacao a.hamburguer {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navegacao .nav-menu li {
+    margin: 20px 0;
+  }
+
+  .navegacao .nav-menu.activeMenuMobile {
+    right: 5px;
+  }
+}
